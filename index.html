@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Testes de Rede</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f9; margin: 0; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+        button:hover { background: #0056b3; }
+        #container { margin-top: 20px; width: 100%; height: 600px; border: 1px solid #ccc; background: white; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+    <h1>Painel de Testes de Rede</h1>
+    <p>Escolha o teste desejado:</p>
+
+    <button onclick="carregarSpeedTest()">Abrir OpenSpeedTest</button>
+    <button onclick="carregarPacketLoss()">Abrir OpenPacketLoss</button>
+
+    <div id="container">
+        <p style="padding-top: 50px; color: #666;">Selecione um botão acima para iniciar o teste.</p>
+    </div>
+
+    <script>
+        function carregarSpeedTest() {
+            // Substitua pelo IP/Porta onde o seu .exe está rodando
+            const urlSpeedTest = "http://SEU_IP_OU_LOCAL_AQUI:3000"; 
+            document.getElementById('container').innerHTML = `<iframe src="${urlSpeedTest}"></iframe>`;
+        }
+
+        function carregarPacketLoss() {
+            // Substitua pela URL do OpenPacketLoss
+            const urlPacketLoss = "https://exemplo.com/openpacketloss"; 
+            document.getElementById('container').innerHTML = `<iframe src="${urlPacketLoss}"></iframe>`;
+        }
+    </script>
+
+</body>
+</html>
