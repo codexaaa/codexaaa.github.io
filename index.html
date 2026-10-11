@@ -27,13 +27,13 @@
     <script>
         function carregarSpeedTest() {
             // Substitua pelo IP/Porta onde o seu .exe está rodando
-            const urlSpeedTest = "http://SEU_IP_OU_LOCAL_AQUI:3000"; 
+            const urlSpeedTest = "http://localhost:3000"; 
             document.getElementById('container').innerHTML = `<iframe src="${urlSpeedTest}"></iframe>`;
         }
 
         function carregarPacketLoss() {
             // Substitua pela URL do OpenPacketLoss
-            const urlPacketLoss = "https://exemplo.com/openpacketloss"; 
+            const urlPacketLoss = "http://localhost:3001"; 
             document.getElementById('container').innerHTML = `<iframe src="${urlPacketLoss}"></iframe>`;
         }
     </script>
